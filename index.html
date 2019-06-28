@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>生日快乐</title>
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <div class="music">
+        <audio>
+                <source src="oops.mp3" type="audio/mpeg"></source>
+                不支持
+        </audio>
+    </div>
+    <div class="card">
+        <!-- 贺卡封面 -->
+        <div class="cover">
+            <div class="bark"></div>
+            <img src="cover.jpg" class="cover-jpg"/>
+        </div>
+
+        <!-- 贺卡内容 -->
+        <div class="details">
+            <h4 class="title">水少，生日快乐！</h4>
+            <br />
+            <p>
+                不知不觉，我们仨都成为大叔级人物，马上就实习，毕业，工作。其实很奇怪，我们三个都属于那种沉默寡言的人，却能成为朋友，大概是闷骚相投吧！过去的还未过去，未来的还未到来，不知道往后生活有多少磨难，兄弟们都一起承担！有快乐一起分享！2019=爱你一直到永久。冲鸭~
+            </p>
+            <p>from 三金 & 钡钡</p>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            let audio = document.getElementsByTagName('audio')[0]; // 音频元素
+            let card = document.getElementsByClassName("card")[0]; // 贺卡
+
+            audio.volume = 0.4; // 控制音频音量
+
+            card.addEventListener('click', ()=>{
+                audio.play();
+            });
+        }
+        
+    </script>
+</body>
+</html>
